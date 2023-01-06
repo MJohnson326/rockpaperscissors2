@@ -70,18 +70,16 @@ function playRound(playerSelection,computerSelection){
         } else if (computerSelection === 'scissors'){
             return declareLose
         }
-    }''
+    }
     while (playerSelection === 'scissors'){
         if (computerSelection === 'rock'){
             return declareLose
         } else if (computerSelection === 'paper'){
             return declareWin
-        } else if (computerSelction === 'scissors'){
+        } else if (computerSelection === 'scissors'){
             return declareTie
         }
     } 
 }
-console.log(playRound(playerSelection,computerSelection))
+console.log(playRound(playerSelection,computerSelection))//print game results
 
-
- 
