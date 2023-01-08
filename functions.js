@@ -1,3 +1,5 @@
+
+//randomize computer selection between rock, paper, or scissons
 function getComputerSelection() {
     let getComputerSelection= Math.floor(Math.random()*3)
     switch (getComputerSelection) {
@@ -10,10 +12,11 @@ function getComputerSelection() {
 }
 }
 
-
+//set scores to begin at 9
 let playerScore = 0;
 let computerScore = 0;
 
+//establish rules/function of rounds
 function playRound(playerSelection,computerSelection) {
     if (playerSelection === computerSelection){
         return `It\s a draw! Try again! Score: Player ${playerScore} to computer ${computerScore}`
@@ -30,7 +33,8 @@ function playRound(playerSelection,computerSelection) {
 
     }
 }
-    
+
+//game play -5 rounds and declares winner
 function game(){
     for( let i = 0; i < 5; i++){
         let input =prompt('Rock, Paper, or Scissors')
@@ -47,4 +51,6 @@ function game(){
     } else
         console.log(`You tied. Final Score: Player ${playerScore} to computer ${computerScore}`);
 }
+
+
 game()
