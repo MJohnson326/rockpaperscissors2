@@ -12,14 +12,14 @@ function getComputerSelection() {
 }
 }
 
-//set scores to begin at 9
+//set scores to begin at 0
 let playerScore = 0;
 let computerScore = 0;
 
 //establish rules/function of rounds
 function playRound(playerSelection,computerSelection) {
     if (playerSelection === computerSelection){
-        return `It\s a draw! Try again! Score: Player ${playerScore} to computer ${computerScore}`
+        return `It\'s a draw! Try again! Score: Player ${playerScore} to computer ${computerScore}`
     } else if ((playerSelection ==='rock' && computerSelection==='scissors')||
     (playerSelection ==='paper' && computerSelection ==='rock')||
     (playerSelection ==='scissors' && computerSelection === 'paper')){
