@@ -9,8 +9,10 @@ function getComputerSelection() {
             return 'paper'
         case 2:
             return 'scissors'
+            
 }
 }
+
 
 //set scores to begin at 9
 let playerScore = 0;
@@ -36,8 +38,9 @@ function playRound(playerSelection,computerSelection) {
 
 //game play -5 rounds and declares winner
 function game(){
-    for( let i = 0; i < 5; i++){
-        let input =prompt('Rock, Paper, or Scissors')
+    // for( let i = 0; i < 5; i++)
+    {
+        let input =prompt('Rock, Paper, or Scissors').toLowerCase()
         let playerSelection = input.toLowerCase()
         console.log(`Player chooses ${playerSelection}`)
         let computerSelection = getComputerSelection()
