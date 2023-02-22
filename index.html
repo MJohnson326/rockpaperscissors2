@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   <!--
-    <label for="userinput">Rock, Paper, Scissors:
-        <input type="text" id="userinput" name="userinput" maxlength="8" minlength="4"></input>
-    </label>
-    <input type="submit">
--->
-<button class="button" id ="rock">Rock</button>
-<button class="button" id ="paper">Paper</button>
-<button class="button" id ="scissors">Scissors</button>
 
-    <script src ="functions.js">
-        
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+    <h1 class="rps">Rock, Paper, Scissors</h1>
+    <div class="btn-container">
+        <button class="button" id="rock" value="rock"><img src="images/playerrock.png"></button>
+        <button class="button" id="paper" value="paper"> <img src="images/playerpaper.png"></button>
+        <button class="button" id="scissors" value="scissors"><img src = "images/playerscissors.png"></button>
+    
+    
+    </div>
+    <div class="pscore"></div>
+    <div class="cpuscore"></div>
+
+    <script src="functions.js">
+
     </script>
 </body>
+
 </html>

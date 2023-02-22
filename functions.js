@@ -40,12 +40,18 @@ function playRound(playerSelection,computerSelection) {
 function game(){
     // for( let i = 0; i < 5; i++)
     {
-        let input =prompt('Rock, Paper, or Scissors').toLowerCase()
-        let playerSelection = input.toLowerCase()
+       // let input =prompt('Rock, Paper, or Scissors').toLowerCase()
+       let button = document.querySelectorAll(button)
+        
+       
+       let playerSelection = button // player selection needs to equal button push
+        
+    
+        
         console.log(`Player chooses ${playerSelection}`)
         let computerSelection = getComputerSelection()
-        console.log(`Computer chooses ${computerSelection}`)
-        console.log(playRound(playerSelection,computerSelection))
+        //console.log(`Computer chooses ${computerSelection}`)
+        //console.log(playRound(playerSelection,computerSelection))
     } 
     if (playerScore > computerScore) {
         console.log(`You're the winner! Final Score:Player ${playerScore} to computer ${computerScore}`);
