@@ -4,9 +4,20 @@ body{
     
 }
 
-img{
-    height: 200px;
-    width:200px;
+h1{
+    text-align:center;
 }
 
+.container{
+    display:flex
 
+}
+
+img{
+    height: 250px;
+    width:250px;
+    object-fit:cover;
+    border-radius:50%;
+    
+
+}
