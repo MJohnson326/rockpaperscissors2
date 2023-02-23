@@ -1,23 +1,44 @@
 body{
     background-color: black;
-    color:azure;
+    color:rgb(224, 222, 211);
     
 }
 
 h1{
     text-align:center;
+    margin: 50px 0;
+    font-family:monospace;
+    font-size:65px
 }
 
-.container{
-    display:flex
+.player-container{
+    display:flex;
+    flex-direction:column;
+    margin-left:100px;
+    
 
 }
 
 img{
-    height: 250px;
-    width:250px;
+    height: 225px;
+    width:225px;
     object-fit:cover;
     border-radius:50%;
-    
+    margin-bottom:10px
 
+}
+
+.cpu-container{
+    display:flex;
+    flex-direction:column;
+    margin-right: 100px
+}
+
+.parent-container{
+    display:flex;
+    justify-content:space-between
+}
+
+img.cpu-choice{
+    transform:scaleX(-1)
 }
