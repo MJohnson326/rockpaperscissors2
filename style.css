@@ -1,44 +1,65 @@
-body{
+body {
     background-color: black;
-    color:rgb(224, 222, 211);
-    
-}
-
-h1{
-    text-align:center;
-    margin: 40px 0;
-    font-family:monospace;
-    font-size:65px
-}
-
-.player-container{
-    display:flex;
-    flex-direction:column;
-    margin-left:100px;
-    
+    color: rgb(224, 222, 211);
+    font-family: monospace;
 
 }
 
-img{
+h1 {
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 65px
+}
+
+.player-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+
+
+}
+
+img {
     height: 200px;
-    width:200px;
-    object-fit:cover;
-    border-radius:50%;
-    margin-bottom:10px
-
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px
 }
 
-.cpu-container{
-    display:flex;
-    flex-direction:column;
+.cpu-container {
+    display: flex;
+    flex-direction: column;
     margin-right: 100px
 }
 
-.parent-container{
-    display:flex;
-    justify-content:space-between
+.parent-container {
+    display: flex;
+    justify-content: space-between
 }
 
-img.cpu-choice{
-    transform:scaleX(-1)
+img.cpu-choice {
+    transform: scaleX(-1)
 }
+
+.middle{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    width:100%;
+  
+
+}
+p{
+    text-align:center;
+    font-size:35px
+
+}
+
+.selection, .scoreboard{
+    display:flex;
+    justify-content:space-around;
+    font-size:25px;
+    
+}
+
