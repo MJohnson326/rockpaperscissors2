@@ -35,7 +35,7 @@ img {
 
 .parent-container {
     display: flex;
-    justify-content: space-between
+  
 }
 
 img.cpu-choice {
@@ -46,7 +46,9 @@ img.cpu-choice {
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-    width:100%;
+    width:100%; 
+    margin:20px 0;
+    align-content:stretch
   
 
 }
