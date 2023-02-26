@@ -88,3 +88,7 @@ p {
 #cpuChoice{
     transform:scaleX(-1)
 }
+
+.btn-image:hover{
+    border: 3px solid yellow
+}

@@ -1,17 +1,17 @@
 
 //randomize computer selection between rock, paper, or scissons
-function getComputerSelection() {
-    let getComputerSelection= Math.floor(Math.random()*3)
-   switch (getComputerSelection) {
-        case 0:
-            return 'rock'
-        case 1:
-            return 'paper'
-        case 2:
-            return 'scissors'
+// function getComputerSelection() {
+//     let getComputerSelection= Math.floor(Math.random()*3)
+//    switch (getComputerSelection) {
+//         case 0:
+//             return 'rock'
+//         case 1:
+//             return 'paper'
+//         case 2:
+//             return 'scissors'
             
-}
-}
+// }
+// }
 
 
 // //set scores to begin at 9
@@ -66,12 +66,6 @@ function getComputerSelection() {
 
 // game()
 
-// var img = document.createElement("img"); 
- 
-// img.src = "images/playerrock.png"; 
-// var place = document.getElementsByClassName("player-selection"); 
- 
-// place.appendChild(img); 
 
 //clickable images for player choice
 
@@ -79,8 +73,8 @@ function replacingImagePlayerRock(){
     document.getElementById("playerChoice").src= "images/playerrock.png"
     playerChoice.style.visibility = 'visible'; 
     
-
 }
+
 
 function replacingImagePlayerPaper(){
     document.getElementById("playerChoice").src= "images/playerpaper.png"
