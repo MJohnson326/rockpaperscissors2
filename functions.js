@@ -1,17 +1,17 @@
 
-// //randomize computer selection between rock, paper, or scissons
-// function getComputerSelection() {
-//     let getComputerSelection= Math.floor(Math.random()*3)
-//     switch (getComputerSelection) {
-//         case 0:
-//             return 'rock'
-//         case 1:
-//             return 'paper'
-//         case 2:
-//             return 'scissors'
+//randomize computer selection between rock, paper, or scissons
+function getComputerSelection() {
+    let getComputerSelection= Math.floor(Math.random()*3)
+   switch (getComputerSelection) {
+        case 0:
+            return 'rock'
+        case 1:
+            return 'paper'
+        case 2:
+            return 'scissors'
             
-// }
-// }
+}
+}
 
 
 // //set scores to begin at 9
@@ -77,8 +77,9 @@
 
 function replacingImagePlayerRock(){
     document.getElementById("playerChoice").src= "images/playerrock.png"
-    playerChoice.style.visibility = 'visible';
+    playerChoice.style.visibility = 'visible'; 
     
+
 }
 
 function replacingImagePlayerPaper(){
@@ -94,5 +95,8 @@ function replacingImagePlayerScissors(){
 
 function replacingImageCpu(){
     document.getElementById("cpuChoice").src="images/playerrock.png"
+    cpuChoice.style.visibility = 'visible'
 }
-replacingImageCpu()
+//replacingImageCpu()
+
+
