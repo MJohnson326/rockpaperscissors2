@@ -65,3 +65,34 @@
 
 
 // game()
+
+// var img = document.createElement("img"); 
+ 
+// img.src = "images/playerrock.png"; 
+// var place = document.getElementsByClassName("player-selection"); 
+ 
+// place.appendChild(img); 
+
+//clickable images for player choice
+
+function replacingImagePlayerRock(){
+    document.getElementById("playerChoice").src= "images/playerrock.png"
+    playerChoice.style.visibility = 'visible';
+    
+}
+
+function replacingImagePlayerPaper(){
+    document.getElementById("playerChoice").src= "images/playerpaper.png"
+    playerChoice.style.visibility = 'visible';
+}
+function replacingImagePlayerScissors(){
+    document.getElementById("playerChoice").src= "images/playerscissors.png"
+    playerChoice.style.visibility = 'visible';
+}
+
+
+
+function replacingImageCpu(){
+    document.getElementById("cpuChoice").src="images/playerrock.png"
+}
+replacingImageCpu()

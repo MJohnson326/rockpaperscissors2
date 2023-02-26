@@ -63,6 +63,8 @@ p {
 
 .selection {
     height: 100%;
+
+    
 }
 
 .player-selection,
@@ -70,6 +72,19 @@ p {
 .pscore,
 .cpuscore {
     width: 50%;
-
-
+   
+}
+#playerChoice, #cpuChoice{
+    height:250px;
+    width:250px;
+    visibility: hidden;
+}
+#img-div{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:90%
+}
+#cpuChoice{
+    transform:scaleX(-1)
 }
