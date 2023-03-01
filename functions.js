@@ -94,6 +94,16 @@ function getComputerSelection() {
 
     }
 
-    getComputerSelection()
+    // on player click over image both player selection and computer selection are made
+const playerClickRock = document.getElementById('playerrock')
+playerClickRock.addEventListener('click', replacingImagePlayerRock)
+playerClickRock.addEventListener('click', getComputerSelection)
 
+const playerClickPaper = document.getElementById('playerpaper')
+playerClickPaper.addEventListener('click', replacingImagePlayerPaper)
+playerClickRock.addEventListener('click', getComputerSelection)
+
+const playerClickScissors = document.getElementById('playerscissors')
+playerClickScissors.addEventListener('click', replacingImagePlayerScissors)
+playerClickRock.addEventListener('click', getComputerSelection)
 
