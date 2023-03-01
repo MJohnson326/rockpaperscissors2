@@ -1,18 +1,4 @@
 
-//randomize computer selection between rock, paper, or scissons
-// function getComputerSelection() {
-//     let getComputerSelection= Math.floor(Math.random()*3)
-//    switch (getComputerSelection) {
-//         case 0:
-//             return 'rock'
-//         case 1:
-//             return 'paper'
-//         case 2:
-//             return 'scissors'
-            
-// }
-// }
-
 
 // //set scores to begin at 9
 // let playerScore = 0;
@@ -42,12 +28,12 @@
 //     {
 //        // let input =prompt('Rock, Paper, or Scissors').toLowerCase()
 //        let button = document.querySelectorAll(button)
-        
-       
+
+
 //        let playerSelection = button // player selection needs to equal button push
-        
-    
-        
+
+
+
 //         //console.log(`Player chooses ${playerSelection}`)
 //         let computerSelection = getComputerSelection()
 //         //console.log(`Computer chooses ${computerSelection}`)
@@ -65,32 +51,49 @@
 
 
 // game()
+// const btn= document.querySelectorAll(".btn")
 
 
+// function getPlayerSelection(){
+//     btn.forEach(addEventListener('click',(e)=>{
+//         btnPressed= e.target.classList[1];
+//         console.log(btnPressed)
+//         let playerSelection = btnPressed.substr(btnPressed.indexOf('-') + 1, btnPressed.length);
+//         console.log(playerSelection);
+//     }))
+// }
 //clickable images for player choice
 
-function replacingImagePlayerRock(){
-    document.getElementById("playerChoice").src= "images/playerrock.png"
-    playerChoice.style.visibility = 'visible'; 
-    
+function replacingImagePlayerRock() {
+    document.getElementById("playerChoice").src = "images/playerrock.png"
+    playerChoice.style.visibility = 'visible';
+
 }
 
-
-function replacingImagePlayerPaper(){
-    document.getElementById("playerChoice").src= "images/playerpaper.png"
+function replacingImagePlayerPaper() {
+    document.getElementById("playerChoice").src = "images/playerpaper.png"
     playerChoice.style.visibility = 'visible';
 }
-function replacingImagePlayerScissors(){
-    document.getElementById("playerChoice").src= "images/playerscissors.png"
+function replacingImagePlayerScissors() {
+    document.getElementById("playerChoice").src = "images/playerscissors.png"
     playerChoice.style.visibility = 'visible';
 }
 
+//randomize computer selection between rock, paper, or scissons
+function getComputerSelection() {
+    let getComputerSelection = (Math.floor(Math.random() * 3))
+        if(getComputerSelection === 0){
+            document.getElementById("cpuChoice").src = "images/playerrock.png"
+            cpuChoice.style.visibility = "visible"
+        }else if (getComputerSelection === 1 ){
+            document.getElementById("cpuChoice").src = "images/playerpaper.png"
+            cpuChoice.style.visibility = "visible"
+        }else if (getComputerSelection === 2){
+            document.getElementById("cpuChoice").src = "images/playerscissors.png"
+            cpuChoice.style.visibility = "visible"}
 
+    }
 
-function replacingImageCpu(){
-    document.getElementById("cpuChoice").src="images/playerrock.png"
-    cpuChoice.style.visibility = 'visible'
-}
-//replacingImageCpu()
+    getComputerSelection()
 
 
