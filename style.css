@@ -77,22 +77,25 @@ p {
 #playerChoice, #cpuChoice {
     height:250px;
     width:250px;
-    visibility: hidden;
+    visibility:hidden;
+   
     
 }
-#img-div{
+.img-div{
     display:flex;
     justify-content:center;
     align-items:center;
     height:90%
 }
 #cpuChoice{
-    transform:scaleX(-1)
+    transform:scaleX(-1);
+    
 }
 
 .btn-image:hover{
     border: 3px solid yellow;
 }
+
 
 .btn-image{
     border: 3px solid transparent

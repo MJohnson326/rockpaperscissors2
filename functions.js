@@ -1,8 +1,8 @@
 
 
-// //set scores to begin at 9
-// let playerScore = 0;
-// let computerScore = 0;
+// //set scores to begin at 0
+let playerScore = 0;
+let computerScore = 0;
 
 // //establish rules/function of rounds
 // function playRound(playerSelection,computerSelection) {
@@ -51,33 +51,32 @@
 
 
 // game()
-// const btn= document.querySelectorAll(".btn")
 
-
-// function getPlayerSelection(){
-//     btn.forEach(addEventListener('click',(e)=>{
-//         btnPressed= e.target.classList[1];
-//         console.log(btnPressed)
-//         let playerSelection = btnPressed.substr(btnPressed.indexOf('-') + 1, btnPressed.length);
-//         console.log(playerSelection);
-//     }))
-// }
 //clickable images for player choice
 
 function replacingImagePlayerRock() {
     document.getElementById("playerChoice").src = "images/playerrock.png"
     playerChoice.style.visibility = 'visible';
-
+    getComputerSelection()
+    
 }
 
 function replacingImagePlayerPaper() {
-    document.getElementById("playerChoice").src = "images/playerpaper.png"
+    document.getElementById("playerChoice").src ="images/playerpaper.png"
     playerChoice.style.visibility = 'visible';
+    getComputerSelection()
 }
+   
 function replacingImagePlayerScissors() {
     document.getElementById("playerChoice").src = "images/playerscissors.png"
     playerChoice.style.visibility = 'visible';
+    getComputerSelection()
+   
 }
+
+
+
+
 
 //randomize computer selection between rock, paper, or scissons
 function getComputerSelection() {
@@ -85,25 +84,35 @@ function getComputerSelection() {
         if(getComputerSelection === 0){
             document.getElementById("cpuChoice").src = "images/playerrock.png"
             cpuChoice.style.visibility = "visible"
+            return 'rock'
         }else if (getComputerSelection === 1 ){
             document.getElementById("cpuChoice").src = "images/playerpaper.png"
             cpuChoice.style.visibility = "visible"
+            return 'paper'
         }else if (getComputerSelection === 2){
             document.getElementById("cpuChoice").src = "images/playerscissors.png"
             cpuChoice.style.visibility = "visible"}
+            return 'scissors'
 
     }
 
+    let computerSelection= getComputerSelection()
+    
+
     // on player click over image both player selection and computer selection are made
-const playerClickRock = document.getElementById('playerrock')
-playerClickRock.addEventListener('click', replacingImagePlayerRock)
-playerClickRock.addEventListener('click', getComputerSelection)
+// const playerClickRock = document.getElementById('playerrock')
+// playerClickRock.addEventListener('click', replacingImagePlayerRock())
+// playerClickRock.addEventListener('click', getComputerSelection())
 
-const playerClickPaper = document.getElementById('playerpaper')
-playerClickPaper.addEventListener('click', replacingImagePlayerPaper)
-playerClickRock.addEventListener('click', getComputerSelection)
+// const playerClickPaper = document.getElementById('playerpaper')
+// playerClickPaper.addEventListener('click', replacingImagePlayerPaper())
+// playerClickRock.addEventListener('click', getComputerSelection())
 
-const playerClickScissors = document.getElementById('playerscissors')
-playerClickScissors.addEventListener('click', replacingImagePlayerScissors)
-playerClickRock.addEventListener('click', getComputerSelection)
+// const playerClickScissors = document.getElementById('playerscissors')
+// playerClickScissors.addEventListener('click', replacingImagePlayerScissors())
+// playerClickRock.addEventListener('click', getComputerSelection())
+
+let playerRock = document.getElementById("#playerrock")
+let playerPaper = document.getElementById("#playerpaper")
+let playerScissors= document.getElementById("#playerscissors")
 
