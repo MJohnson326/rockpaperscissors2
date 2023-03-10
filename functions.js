@@ -4,34 +4,13 @@
 let playerScore = 0;
 let computerScore = 0;
 
-// //establish rules/function of rounds
-// function playRound(playerSelection,computerSelection) {
-//     if (playerSelection === computerSelection){
-//         return `It\s a draw! Try again! Score: Player ${playerScore} to computer ${computerScore}`
-//     } else if ((playerSelection ==='rock' && computerSelection==='scissors')||
-//     (playerSelection ==='paper' && computerSelection ==='rock')||
-//     (playerSelection ==='scissors' && computerSelection === 'paper')){
-//         playerScore++
-//         return `${playerSelection} beats ${computerSelection}. Score: Player ${playerScore} to computer ${computerScore}.`
-//     } else if((playerSelection ==='rock' && computerSelection === 'paper')||
-//     (playerSelection==='paper' && computerSelection ==='scissors')||
-//     (playerSelection === 'scissors' && computerSelection === 'rock')){
-//         computerScore++ 
-//         return `${computerSelection} beats ${playerSelection}. Score: Player ${playerScore} to computer ${computerScore}.`
-
-//     }
-// }
 
 // //game play -5 rounds and declares winner
 // function game(){
 //     // for( let i = 0; i < 5; i++)
 //     {
 //        // let input =prompt('Rock, Paper, or Scissors').toLowerCase()
-//        let button = document.querySelectorAll(button)
-
-
-//        let playerSelection = button // player selection needs to equal button push
-
+//       
 
 
 //         //console.log(`Player chooses ${playerSelection}`)
@@ -77,9 +56,8 @@ function replacingImagePlayerScissors() {
 
 
 
-
 //randomize computer selection between rock, paper, or scissons
-function getComputerSelection() {
+function getComputerSelection(){
     let getComputerSelection = (Math.floor(Math.random() * 3))
         if(getComputerSelection === 0){
             document.getElementById("cpuChoice").src = "images/playerrock.png"
@@ -97,22 +75,32 @@ function getComputerSelection() {
     }
 
     let computerSelection= getComputerSelection()
-    
 
-    // on player click over image both player selection and computer selection are made
-// const playerClickRock = document.getElementById('playerrock')
-// playerClickRock.addEventListener('click', replacingImagePlayerRock())
-// playerClickRock.addEventListener('click', getComputerSelection())
 
-// const playerClickPaper = document.getElementById('playerpaper')
-// playerClickPaper.addEventListener('click', replacingImagePlayerPaper())
-// playerClickRock.addEventListener('click', getComputerSelection())
 
-// const playerClickScissors = document.getElementById('playerscissors')
-// playerClickScissors.addEventListener('click', replacingImagePlayerScissors())
-// playerClickRock.addEventListener('click', getComputerSelection())
 
-let playerRock = document.getElementById("#playerrock")
-let playerPaper = document.getElementById("#playerpaper")
-let playerScissors= document.getElementById("#playerscissors")
+function playerClick(){
+ 
 
+}
+
+let btn = document.getElementsByClassName('.btn')
+
+
+//establish rules/function of rounds
+// function playRound(playerSelection,computerSelection) {
+//     if (playerSelection === computerSelection){
+//         return `It\s a draw! Try again! Score: Player ${playerScore} to computer ${computerScore}`
+//     } else if ((playerSelection ==='rock' && computerSelection==='scissors')||
+//     (playerSelection ==='paper' && computerSelection ==='rock')||
+//     (playerSelection ==='scissors' && computerSelection === 'paper')){
+//         playerScore++
+//         return `${playerSelection} beats ${computerSelection}. Score: Player ${playerScore} to computer ${computerScore}.`
+//     } else if((playerSelection ==='rock' && computerSelection === 'paper')||
+//     (playerSelection==='paper' && computerSelection ==='scissors')||
+//     (playerSelection === 'scissors' && computerSelection === 'rock')){
+//         computerScore++ 
+//         return `${computerSelection} beats ${playerSelection}. Score: Player ${playerScore} to computer ${computerScore}.`
+
+//     }
+// }

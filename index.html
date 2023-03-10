@@ -14,12 +14,10 @@
     <p class="five">First to 5 wins!</p>
     <div class="parent-container">
         <div class="player-container">
-            <!-- <button class="button" id="rock" value="rock">-->
-            <img class="btn-image" src="images/playerrock.png" id="rock" onClick="replacingImagePlayerRock()">
-            <!-- <button class="button" id="paper" value="paper"> -->
-            <img class="btn-image" src="images/playerpaper.png" id="paper" onClick="replacingImagePlayerPaper()">
-            <!--<button class="button" id="scissors" value="scissors">-->
-            <img class="btn-image" src="images/playerscissors.png" id="scissors" onClick="replacingImagePlayerScissors()">
+            
+            <img class="btn" src="images/playerrock.png" id="rock" onclick="playerClick(this.id)">
+            <img class="btn" src="images/playerpaper.png" id="paper" onclick="playerClick(this.id)">
+            <img class="btn" src="images/playerscissors.png" id="scissors" onclick="playerClick(this.id)">
         </div>
         <div class="middle">
             <div class="selection">
