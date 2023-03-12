@@ -58,18 +58,15 @@ function replacingImagePlayerScissors() {
 
 //randomize computer selection between rock, paper, or scissons
 function getComputerSelection(){
-    let getComputerSelection = (Math.floor(Math.random() * 3))
-        if(getComputerSelection === 0){
-            document.getElementById("cpuChoice").src = "images/playerrock.png"
-            // cpuChoice.style.visibility = "visible"
+    let getComputerSelection = (Math.floor(Math.random() * 3))  //randomize number 
+        if(getComputerSelection === 0){ //assign random number to computer selection
+            document.getElementById("cpuChoice").src = "images/playerrock.png" //insert rock image 
             return 'rock'
-        }else if (getComputerSelection === 1 ){
-            document.getElementById("cpuChoice").src = "images/playerpaper.png"
-            // cpuChoice.style.visibility = "visible"
+        }else if (getComputerSelection === 1 ){//assign random number to computer selection
+            document.getElementById("cpuChoice").src = "images/playerpaper.png"//insert paper image
             return 'paper'
-        }else if (getComputerSelection === 2){
-            document.getElementById("cpuChoice").src = "images/playerscissors.png"
-            // cpuChoice.style.visibility = "visible"}
+        }else if (getComputerSelection === 2){//assign random number to computer selection
+            document.getElementById("cpuChoice").src = "images/playerscissors.png"// insert rock image
             return 'scissors'
 
     }
@@ -79,9 +76,9 @@ function getComputerSelection(){
 
    
 function playerClick(clicked){
-    document.getElementById('cpuChoice')
-    cpuChoice.style.visibility = "visible"
-   if (clicked ==='rock'){
+    document.getElementById('cpuChoice') 
+    cpuChoice.style.visibility = "visible" // computer selection visible on click
+   if (clicked ==='rock'){ //run function to input player selection images
     replacingImagePlayerRock()
     return 'rock'
    }else if (clicked === 'paper'){
@@ -90,10 +87,9 @@ function playerClick(clicked){
     }else if (clicked === 'scissors'){
         replacingImagePlayerScissors()
         return 'scissors'
-    }
-    
-      
+    } 
    }
+
 //establish rules/function of rounds
 // function playRound(playerSelection,computerSelection) {
 //     if (playerSelection === computerSelection){
