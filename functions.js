@@ -71,25 +71,30 @@ function getComputerSelection(){
 
     }
 }
-
-    let computerSelection= getComputerSelection()
+let computerSelection = getComputerSelection()
 
    
-function playerClick(clicked){
-    document.getElementById('cpuChoice') 
-    cpuChoice.style.visibility = "visible" // computer selection visible on click
-   if (clicked ==='rock'){ //run function to input player selection images
+const playerSelection = function(){  
+if (this.id==='rock'){ //run function to input player selection images
     replacingImagePlayerRock()
     return 'rock'
-   }else if (clicked === 'paper'){
+   }else if (this.id=== 'paper'){
     replacingImagePlayerPaper()
     return 'paper'
-    }else if (clicked === 'scissors'){
+    }else if (this.id=== 'scissors'){
         replacingImagePlayerScissors()
         return 'scissors'
     } 
+    document.getElementById('cpuChoice') 
+    cpuChoice.style.visibility = "visible" // computer selection visible on click
+    getComputerSelection()
    }
+   
 
+   document.getElementById('rock').onclick= playerSelection
+   document.getElementById('paper').onclick= playerSelection
+   document.getElementById('scissors').onclick= playerSelection
+   
 //establish rules/function of rounds
 // function playRound(playerSelection,computerSelection) {
 //     if (playerSelection === computerSelection){
