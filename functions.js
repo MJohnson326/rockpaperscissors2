@@ -61,23 +61,26 @@ function getComputerSelection(){
     let getComputerSelection = (Math.floor(Math.random() * 3))
         if(getComputerSelection === 0){
             document.getElementById("cpuChoice").src = "images/playerrock.png"
-            cpuChoice.style.visibility = "visible"
+            // cpuChoice.style.visibility = "visible"
             return 'rock'
         }else if (getComputerSelection === 1 ){
             document.getElementById("cpuChoice").src = "images/playerpaper.png"
-            cpuChoice.style.visibility = "visible"
+            // cpuChoice.style.visibility = "visible"
             return 'paper'
         }else if (getComputerSelection === 2){
             document.getElementById("cpuChoice").src = "images/playerscissors.png"
-            cpuChoice.style.visibility = "visible"}
+            // cpuChoice.style.visibility = "visible"}
             return 'scissors'
 
     }
+}
 
     let computerSelection= getComputerSelection()
 
    
-   function playerClick(clicked){
+function playerClick(clicked){
+    document.getElementById('cpuChoice')
+    cpuChoice.style.visibility = "visible"
    if (clicked ==='rock'){
     replacingImagePlayerRock()
     return 'rock'
@@ -88,11 +91,9 @@ function getComputerSelection(){
         replacingImagePlayerScissors()
         return 'scissors'
     }
+    
+      
    }
-
-  
-
-
 //establish rules/function of rounds
 // function playRound(playerSelection,computerSelection) {
 //     if (playerSelection === computerSelection){
