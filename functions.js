@@ -76,15 +76,21 @@ function getComputerSelection(){
 
     let computerSelection= getComputerSelection()
 
+   
+   function playerClick(clicked){
+   if (clicked ==='rock'){
+    replacingImagePlayerRock()
+    return 'rock'
+   }else if (clicked === 'paper'){
+    replacingImagePlayerPaper()
+    return 'paper'
+    }else if (clicked === 'scissors'){
+        replacingImagePlayerScissors()
+        return 'scissors'
+    }
+   }
 
-
-
-function playerClick(){
- 
-
-}
-
-let btn = document.getElementsByClassName('.btn')
+  
 
 
 //establish rules/function of rounds
