@@ -47,7 +47,7 @@ img.cpu-choice {
     flex-direction: column;
     width: 100%;
     margin: 20px 0;
-    text-align:center
+    text-align: center
 }
 
 p {
@@ -64,7 +64,7 @@ p {
 .selection {
     height: 100%;
 
-    
+
 }
 
 .player-selection,
@@ -72,33 +72,35 @@ p {
 .pscore,
 .cpuscore {
     width: 50%;
-   
-}
-#playerChoice, #cpuChoice {
-    height:250px;
-    width:250px;
-    visibility:hidden
-   
-    
-}
-.img-div{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:90%;
-    
-}
-#cpuChoice{
-    transform:scaleX(-1);
-   
-    
+
 }
 
-.btn:hover{
+#playerChoice,
+#cpuChoice {
+    height: 250px;
+    width: 250px;
+    visibility: hidden
+}
+
+.img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+
+}
+
+#cpuChoice {
+    transform: scaleX(-1);
+
+
+}
+
+.btn:hover {
     border: 3px solid yellow;
 }
 
 
-.btn{
+.btn {
     border: 3px solid transparent
 }
