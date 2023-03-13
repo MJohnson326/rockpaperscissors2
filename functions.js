@@ -30,15 +30,15 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection === 'paper' && computerSelection === 'rock') ||
         (playerSelection === 'scissors' && computerSelection === 'paper')) {
         playerScore++
-        pscore.innerHTML = `${playerScore}`
-        cpuscore.innerHTML = `${computerScore}`
+        pscore.innerHTML = `Your Score: ${playerScore}`
+        cpuscore.innerHTML = `Opponent Score: ${computerScore}`
         return
     } else if ((playerSelection === 'rock' && computerSelection === 'paper') ||
         (playerSelection === 'paper' && computerSelection === 'scissors') ||
         (playerSelection === 'scissors' && computerSelection === 'rock')) {
         computerScore++
-        pscore.innerHTML = `${playerScore}`
-        cpuscore.innerHTML = `${computerScore}`
+        pscore.innerHTML = `Your Score: ${playerScore}`
+        cpuscore.innerHTML = `Opponent Score: ${computerScore}`
         return
     }
 
@@ -53,18 +53,19 @@ function endGame(){
         }else if((playerScore === 10 || computerScore ===10)&&(playerScore<computerScore)){
             alert ('You lose! Hit refresh to play again!')}
 pscore.innerHTML = 'Your Score: '
-cpuscore.innerHTML = 'Opponent Score:'
+cpuscore.innerHTML = 'Opponent Score: '
     }
 }
 
 function gamePlay() {
-    btns.forEach(addEventListener('click', (e) => {
+btns.forEach(addEventListener('click', (e) => {
         btnPressed = e.target.id;
         let playerSelection = btnPressed
         document.getElementById("playerChoice").src = `images/${playerSelection}.png`
         playerChoice.style.visibility = 'visible';
-        let computerSelection = getComputerSelection()
+        
         getComputerSelection()
+        let computerSelection = getComputerSelection()
         document.getElementById('cpuChoice').src = `images/${computerSelection}.png`
         cpuChoice.style.visibility = 'visible'
 
