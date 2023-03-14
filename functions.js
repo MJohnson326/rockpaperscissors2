@@ -1,4 +1,4 @@
-let btns = document.getElementsByClassName('.btn') //player choices
+let btns = document.getElementsByClassName('btn') //player choices
 
 let pscore = document.querySelector('.pscore') //player score div
 let cpuscore = document.querySelector('.cpuscore') //computer score div
@@ -57,8 +57,11 @@ cpuscore.innerHTML = 'Opponent Score: '
     }
 }
 
+
+
 function gamePlay() {
-btns.forEach(addEventListener('click', (e) => {
+    let btns = document.querySelectorAll('.btn')
+btns.forEach(btn => btn.addEventListener('click', (e) => {
         btnPressed = e.target.id;
         let playerSelection = btnPressed
         document.getElementById("playerChoice").src = `images/${playerSelection}.png`
@@ -76,4 +79,6 @@ btns.forEach(addEventListener('click', (e) => {
     }))
 
 }
+
+
 gamePlay()
