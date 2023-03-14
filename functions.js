@@ -31,16 +31,16 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection === 'paper' && computerSelection === 'rock') ||
         (playerSelection === 'scissors' && computerSelection === 'paper')) {
         playerScore++
-        pscore.innerHTML = `Your Score: ${playerScore}`
-        cpuscore.innerHTML = `Opponent Score: ${computerScore}`
+        pscore.innerHTML = `Your score: ${playerScore}`
+        cpuscore.innerHTML = `Opponent score: ${computerScore}`
         resulttext.innerHTML = `${playerSelection} beats ${computerSelection}`
         return
     } else if ((playerSelection === 'rock' && computerSelection === 'paper') ||
         (playerSelection === 'paper' && computerSelection === 'scissors') ||
         (playerSelection === 'scissors' && computerSelection === 'rock')) {
         computerScore++
-        pscore.innerHTML = `Your Score: ${playerScore}`
-        cpuscore.innerHTML = `Opponent Score: ${computerScore}`
+        pscore.innerHTML = `Your score: ${playerScore}`
+        cpuscore.innerHTML = `Opponent score: ${computerScore}`
         resulttext.innerHTML = `${playerSelection} loses to ${computerSelection}`
         return
     }
@@ -56,8 +56,8 @@ function endGame() {
         } else if ((playerScore === 10 || computerScore === 10) && (playerScore < computerScore)) {
             alert('You lose! Hit refresh to play again!')
         }
-        pscore.innerHTML = 'Your Score: '
-        cpuscore.innerHTML = 'Opponent Score: '
+        pscore.innerHTML = 'Your score: '
+        cpuscore.innerHTML = 'Opponent score: '
     }
 }
 
