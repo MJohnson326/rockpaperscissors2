@@ -1,4 +1,5 @@
-
+let result = document.querySelector('.result')//div to put round result
+let resulttext = document.querySelector('.resulttext')
 let pscore = document.querySelector('.pscore') //player score div
 let cpuscore = document.querySelector('.cpuscore') //computer score div
 
@@ -24,6 +25,7 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         pscore.innerHTML = `Your Score: ${playerScore}`
         cpuscore.innerHTML = `Opponent Score: ${computerScore}`
+        resulttext.innerHTML = `${playerSelection} vs.${computerSelection} -it's a tie!`
         return
     } else if ((playerSelection === 'rock' && computerSelection === 'scissors') ||
         (playerSelection === 'paper' && computerSelection === 'rock') ||
@@ -31,6 +33,7 @@ function playRound(playerSelection, computerSelection) {
         playerScore++
         pscore.innerHTML = `Your Score: ${playerScore}`
         cpuscore.innerHTML = `Opponent Score: ${computerScore}`
+        resulttext.innerHTML = `${playerSelection} beats ${computerSelection}`
         return
     } else if ((playerSelection === 'rock' && computerSelection === 'paper') ||
         (playerSelection === 'paper' && computerSelection === 'scissors') ||
@@ -38,6 +41,7 @@ function playRound(playerSelection, computerSelection) {
         computerScore++
         pscore.innerHTML = `Your Score: ${playerScore}`
         cpuscore.innerHTML = `Opponent Score: ${computerScore}`
+        resulttext.innerHTML = `${playerSelection} loses to ${computerSelection}`
         return
     }
 

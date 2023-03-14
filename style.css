@@ -104,3 +104,7 @@ p {
 .btn {
     border: 3px solid transparent
 }
+.resulttext{
+    font-size:25px;
+    text-align:center
+}
