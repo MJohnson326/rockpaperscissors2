@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
 </head>
+
 <body>
-   <!--
-    <label for="userinput">Rock, Paper, Scissors:
-        <input type="text" id="userinput" name="userinput" maxlength="8" minlength="4"></input>
-    </label>
-    <input type="submit">
--->
-    
-    <script src ="functions.js">
-        
+    <h1 class="rps">Rock // Paper // Scissors</h1>
+    <p class="five">First to 5 wins!</p>
+    <div class="parent-container">
+        <div class="player-container">
+
+            <img class="btn" src="images/rock.png" id="rock">
+            <img class="btn" src="images/paper.png" id="paper">
+            <img class="btn" src="images/scissors.png" id="scissors">
+        </div>
+        <div class="middle">
+            <div class="selection">
+                <div class="player-selection">You chose:<div class='img-div'><img src='' id="playerChoice"></div>
+                </div>
+                <div class="cpu-selection">Opponent chose:<div class='img-div'><img src='' id="cpuChoice"></div>
+                </div>
+            </div>
+            <div class="scoreboard">
+                <div class="pscore">Your Score:</div>
+                <div class="cpuscore">Opponent Score:</div>
+            </div>
+
+        </div>
+        <div class="cpu-container">
+            <img class="cpu-choice" src="images/rock.png">
+            <img class="cpu-choice" src="images/paper.png">
+            <img class="cpu-choice" src="images/scissors.png">
+        </div>
+
+    </div>
+
+
+    <script src="functions.js" defer>
+
     </script>
 </body>
+
 </html>

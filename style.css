@@ -1,0 +1,106 @@
+body {
+    background-color: black;
+    color: rgb(224, 222, 211);
+    font-family: monospace;
+
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 65px
+}
+
+.player-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+
+
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px
+}
+
+.cpu-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px
+}
+
+.parent-container {
+    display: flex;
+
+}
+
+img.cpu-choice {
+    transform: scaleX(-1)
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+    text-align: center
+}
+
+p {
+    text-align: center;
+    font-size: 35px
+}
+
+.selection,
+.scoreboard {
+    display: flex;
+    font-size: 25px;
+}
+
+.selection {
+    height: 100%;
+
+
+}
+
+.player-selection,
+.cpu-selection,
+.pscore,
+.cpuscore {
+    width: 50%;
+
+}
+
+#playerChoice,
+#cpuChoice {
+    height: 250px;
+    width: 250px;
+    visibility: hidden
+}
+
+.img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+
+}
+
+#cpuChoice {
+    transform: scaleX(-1);
+
+
+}
+
+.btn:hover {
+    border: 3px solid yellow;
+}
+
+
+.btn {
+    border: 3px solid transparent
+}

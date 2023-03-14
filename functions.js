@@ -1,17 +1,9 @@
+let btns = document.getElementsByClassName('btn') //player choices
 
-//randomize computer selection between rock, paper, or scissons
-function getComputerSelection() {
-    let getComputerSelection= Math.floor(Math.random()*3)
-    switch (getComputerSelection) {
-        case 0:
-            return 'rock'
-        case 1:
-            return 'paper'
-        case 2:
-            return 'scissors'
-}
-}
+let pscore = document.querySelector('.pscore') //player score div
+let cpuscore = document.querySelector('.cpuscore') //computer score div
 
+<<<<<<< HEAD
 //set scores to begin at 0
 let playerScore = 0;
 let computerScore = 0;
@@ -31,26 +23,84 @@ function playRound(playerSelection,computerSelection) {
         computerScore++ 
         return `${computerSelection} beats ${playerSelection}. Score: Player ${playerScore} to computer ${computerScore}.`
 
+=======
+// //set scores to begin at 0
+let playerScore = 0;
+let computerScore = 0;
+
+//randomize computer selection between rock, paper, or scissons
+function getComputerSelection() {
+    let getComputerSelection = (Math.floor(Math.random() * 3))  //randomize number 
+    if (getComputerSelection === 0) { //assign random number to computer selection
+        return 'rock'
+    } else if (getComputerSelection === 1) {//assign random number to computer selection
+        return 'paper'
+    } else if (getComputerSelection === 2) {//assign random number to computer selection
+        return 'scissors'
+>>>>>>> rps2-ui
     }
 }
 
-//game play -5 rounds and declares winner
-function game(){
-    for( let i = 0; i < 5; i++){
-        let input =prompt('Rock, Paper, or Scissors')
-        let playerSelection = input.toLowerCase()
-        console.log(`Player chooses ${playerSelection}`)
-        let computerSelection = getComputerSelection()
-        console.log(`Computer chooses ${computerSelection}`)
-        console.log(playRound(playerSelection,computerSelection))
-    } 
-    if (playerScore > computerScore) {
-        console.log(`You're the winner! Final Score:Player ${playerScore} to computer ${computerScore}`);
-    } else if (computerScore > playerScore) {
-        console.log(`You're the loser. Final Score: Player ${playerScore} to computer ${computerScore}`);
-    } else
-        console.log(`You tied. Final Score: Player ${playerScore} to computer ${computerScore}`);
+
+//establish rules/function of rounds
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        pscore.innerHTML = `Your Score: ${playerScore}`
+        cpuscore.innerHTML = `Opponent Score: ${computerScore}`
+        return
+    } else if ((playerSelection === 'rock' && computerSelection === 'scissors') ||
+        (playerSelection === 'paper' && computerSelection === 'rock') ||
+        (playerSelection === 'scissors' && computerSelection === 'paper')) {
+        playerScore++
+        pscore.innerHTML = `Your Score: ${playerScore}`
+        cpuscore.innerHTML = `Opponent Score: ${computerScore}`
+        return
+    } else if ((playerSelection === 'rock' && computerSelection === 'paper') ||
+        (playerSelection === 'paper' && computerSelection === 'scissors') ||
+        (playerSelection === 'scissors' && computerSelection === 'rock')) {
+        computerScore++
+        pscore.innerHTML = `Your Score: ${playerScore}`
+        cpuscore.innerHTML = `Opponent Score: ${computerScore}`
+        return
+    }
+
+}
+
+function endGame(){
+    if(playerScore <10 && computerScore<10){
+        console.log('nothing')
+    }else{
+        if((playerScore === 10 || computerScore ===10)&&(playerScore>computerScore)){
+            alert ('You win! Hit refresh to play again!')
+        }else if((playerScore === 10 || computerScore ===10)&&(playerScore<computerScore)){
+            alert ('You lose! Hit refresh to play again!')}
+pscore.innerHTML = 'Your Score: '
+cpuscore.innerHTML = 'Opponent Score: '
+    }
 }
 
 
-game()
+
+function gamePlay() {
+    let btns = document.querySelectorAll('.btn')
+btns.forEach(btn => btn.addEventListener('click', (e) => {
+        btnPressed = e.target.id;
+        let playerSelection = btnPressed
+        document.getElementById("playerChoice").src = `images/${playerSelection}.png`
+        playerChoice.style.visibility = 'visible';
+        
+        getComputerSelection()
+        let computerSelection = getComputerSelection()
+        document.getElementById('cpuChoice').src = `images/${computerSelection}.png`
+        cpuChoice.style.visibility = 'visible'
+
+        playRound(playerSelection, computerSelection)
+        endGame()
+
+
+    }))
+
+}
+
+
+gamePlay()
